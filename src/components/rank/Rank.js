@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Rank = ({ name, entries }) => {
+export default function Rank(props) {
+	const { name, entries } = props;
+
+	const face = Number(entries) !== 1 ? 'faces' : 'face';
+
 	return (
 		<div>
-			<div className='white f3'>
-				{`${name}, your current entries count is...`}
+			<div className="white f3 b">Welcome, {name}</div>
+			<div className="white f3 mt3 b">
+				You have detected {entries} {face}.
 			</div>
-      <div className='white f1 '>
-        {entries}
-      </div>
 		</div>
 	);
 }
-
-export default Rank;		

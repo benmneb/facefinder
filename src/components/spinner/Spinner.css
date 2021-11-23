@@ -1,0 +1,50 @@
+.Spinner-root {
+	width: 1.8rem;
+	height: 1.8rem;
+	position: relative;
+	display: inline-block;
+}
+
+.Spinner-disc1 {
+	position: absolute;
+	top: -25%;
+	left: -25%;
+	width: 1.8rem;
+	height: 1.8rem;
+	border: 6px solid black;
+	opacity: 0.4;
+	border-radius: 100%;
+	perspective: 800px;
+	animation: 2s linear 0s infinite normal none running rotate-disc1;
+}
+
+.Spinner-disc2 {
+	position: absolute;
+	top: -25%;
+	left: -25%;
+	width: 1.8rem;
+	height: 1.8rem;
+	border: 6px solid black;
+	opacity: 0.4;
+	border-radius: 100%;
+	perspective: 800px;
+	animation: 2s linear 0s infinite normal none running rotate-disc2;
+}
+
+@keyframes rotate-disc1 {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(180deg) rotateY(360deg) rotateZ(360deg);
+	}
+}
+
+@keyframes rotate-disc2 {
+	0% {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+	}
+}
